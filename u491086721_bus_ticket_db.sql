@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 01, 2025 at 10:38 AM
+-- Generation Time: Oct 05, 2025 at 05:59 AM
 -- Server version: 11.8.3-MariaDB-log
 -- PHP Version: 7.2.34
 
@@ -58,7 +58,9 @@ INSERT INTO `active_trips` (`trip_id`, `schedule_id`, `bus_id`, `driver_id`, `ro
 (41, 0, 6, 6, 26, '2025-09-02', '2025-09-02 02:50:25', '2025-09-02 02:50:29', '2025-09-02 03:21:25', '2025-09-02 02:51:54', 'completed', 0, '2025-09-01 18:50:25', '2025-09-01 18:51:56'),
 (42, 0, 6, 6, 27, '2025-09-02', '2025-09-02 02:52:00', '2025-09-02 02:52:03', '2025-09-02 03:21:00', '2025-09-02 16:01:31', 'completed', 19, '2025-09-01 18:52:00', '2025-09-02 08:01:33'),
 (43, 0, 6, 6, 27, '2025-09-02', '2025-09-02 16:06:47', '2025-09-02 17:08:15', '2025-09-02 16:35:47', '2025-09-02 17:08:18', 'completed', 0, '2025-09-02 08:06:47', '2025-09-02 09:08:19'),
-(44, 0, 6, 6, 27, '2025-09-03', '2025-09-03 01:56:58', '2025-09-03 01:57:01', '2025-09-03 02:25:58', NULL, 'departed', 0, '2025-09-02 17:56:58', '2025-09-02 17:57:01');
+(44, 0, 6, 6, 27, '2025-09-03', '2025-09-03 01:56:58', '2025-09-03 01:57:01', '2025-09-03 02:25:58', '2025-10-03 13:44:15', 'completed', 2, '2025-09-02 17:56:58', '2025-10-03 13:44:59'),
+(45, 0, 6, 6, 27, '2025-10-03', '2025-10-03 21:45:12', '2025-10-03 13:45:21', '2025-10-03 22:14:12', '2025-10-03 13:45:57', 'completed', 9, '2025-10-03 13:45:12', '2025-10-03 13:46:01'),
+(46, 0, 6, 6, 27, '2025-10-05', '2025-10-05 13:29:01', '2025-10-05 05:29:24', '2025-10-05 13:58:01', '2025-10-05 05:31:48', 'completed', 0, '2025-10-05 05:29:01', '2025-10-05 05:31:50');
 
 -- --------------------------------------------------------
 
@@ -344,7 +346,9 @@ INSERT INTO `admin_activity_log` (`log_id`, `admin_username`, `action`, `details
 (262, 'admin', 'Bus Maintenance', 'Bus ID: 6', '::1', '2025-09-02 08:01:54'),
 (263, 'admin', 'Activate Bus', 'Bus ID: 6', '::1', '2025-09-02 08:01:58'),
 (264, 'admin', 'Logout', NULL, '49.151.88.244', '2025-09-24 20:17:57'),
-(265, 'admin', 'Logout', NULL, '49.151.88.244', '2025-09-24 20:18:13');
+(265, 'admin', 'Logout', NULL, '49.151.88.244', '2025-09-24 20:18:13'),
+(266, 'admin', 'Logout', NULL, '49.151.88.244', '2025-10-05 05:33:49'),
+(267, 'admin', 'Logout', NULL, '49.151.88.244', '2025-10-05 05:39:45');
 
 -- --------------------------------------------------------
 
@@ -372,6 +376,7 @@ INSERT INTO `admin_sessions` (`session_id`, `admin_username`, `created_at`, `exp
 ('54fcb32fedda2e23a424d533c1660e5d7e986683ce1848fcee67719e7d12a365', 'admin', '2025-08-28 13:43:20', '2025-08-28 14:45:23', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'),
 ('85843e513e72f3e8d1f0257bb626978a59ce4273211e9c0825f38c42010daa80', 'admin', '2025-08-21 21:57:10', '2025-08-21 22:57:29', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'),
 ('965f35856db88dc274964ddc07c0766d9db528a0083719084748c051077c1171', 'admin', '2025-08-19 21:39:06', '2025-08-19 23:25:37', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'),
+('c19fa88865d979431e7fe53bc88025f39d5c4a4fef004f5a2f05b854c01255dc', 'admin', '2025-10-01 13:32:30', '2025-10-01 14:33:27', '180.191.16.93', 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Mobile Safari/537.36'),
 ('c281f0a5c6ae237524f71687c16e3ddc95f8259bb902ccc9248699d7270ba195', 'admin', '2025-09-02 15:31:38', '2025-09-02 17:01:58', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36'),
 ('c8051b9bcd2e6618bc400ce6c4efd6c0d6b4b458489b51d6f2c09d1d40a2834f', 'admin', '2025-08-21 10:15:56', '2025-08-21 11:15:56', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36');
 
@@ -416,7 +421,8 @@ INSERT INTO `bookings` (`booking_id`, `booking_reference`, `user_id`, `bus_id`, 
 (39, 'BUS20250902CB2B08', 3, 6, 27, 40, 1, '2025-09-02', '02:09:26', 50.00, 'pending', 'completed', NULL, '2025-09-01 18:29:00', '2025-09-01 18:47:02', NULL, NULL, 1, 1, 6),
 (40, 'BUS20250902E87300', 3, 6, 26, 41, 1, '2025-09-02', '02:50:25', 50.00, 'pending', 'completed', NULL, '2025-09-01 18:50:38', '2025-09-01 18:51:58', NULL, NULL, 1, 1, 6),
 (41, 'BUS2025090280F879', 3, 6, 27, 42, 1, '2025-09-02', '02:52:00', 50.00, 'pending', 'completed', NULL, '2025-09-01 18:52:08', '2025-09-02 16:41:10', NULL, NULL, 1, 1, 6),
-(42, 'BUS2025090377D279', 3, 6, 27, 44, 1, '2025-09-03', '01:56:58', 50.00, 'pending', 'cancelled', NULL, '2025-09-02 17:57:27', '2025-09-02 18:11:12', NULL, NULL, 0, 0, NULL);
+(42, 'BUS2025090377D279', 3, 6, 27, 44, 1, '2025-09-03', '01:56:58', 50.00, 'pending', 'cancelled', NULL, '2025-09-02 17:57:27', '2025-09-02 18:11:12', NULL, NULL, 0, 0, NULL),
+(43, 'BUS20251005DEEE82', 3, 6, 27, 46, 1, '2025-10-05', '13:29:01', 50.00, 'pending', 'confirmed', NULL, '2025-10-05 05:29:33', '2025-10-05 05:31:24', NULL, NULL, 1, 1, 6);
 
 -- --------------------------------------------------------
 
@@ -440,7 +446,7 @@ CREATE TABLE `buses` (
 --
 
 INSERT INTO `buses` (`bus_id`, `bus_number`, `plate_number`, `capacity`, `status`, `created_at`, `updated_at`, `assigned_route_id`) VALUES
-(6, '008', '2', 20, 'on_trip', '2025-08-29 14:38:16', '2025-09-02 17:56:58', NULL);
+(6, '008', '2', 20, 'available', '2025-08-29 14:38:16', '2025-10-05 05:31:50', NULL);
 
 -- --------------------------------------------------------
 
@@ -465,7 +471,7 @@ CREATE TABLE `bus_locations` (
 --
 
 INSERT INTO `bus_locations` (`location_id`, `bus_id`, `latitude`, `longitude`, `speed`, `heading`, `accuracy`, `updated_at`, `last_updated`) VALUES
-(3278, 6, 16.87673820, 121.59406620, 0.00, 0.00, 5446.13, '2025-09-02 18:11:17', '2025-09-02 18:11:17');
+(3278, 6, 16.87552000, 121.59549440, 0.00, 0.00, 1008.65, '2025-10-05 05:31:50', '2025-10-05 05:31:50');
 
 -- --------------------------------------------------------
 
@@ -514,8 +520,8 @@ CREATE TABLE `drivers` (
 --
 
 INSERT INTO `drivers` (`driver_id`, `driver_code`, `full_name`, `mobile_number`, `email`, `license_number`, `password`, `assigned_bus_id`, `status`, `created_at`, `updated_at`, `created_by_admin`) VALUES
-(6, 'DRV20253934', 'Patrick Miguel Blas', '09602618779', 'blasmiggy@gmail.com', '12312313123', '$2y$10$LJ4kwndAjG4VeWiJDuyoSeTn.QAwdBGWjLjbObpETclOQkhvP1aCq', 6, 'active', '2025-08-28 08:36:34', '2025-08-29 21:33:43', 1),
-(7, 'DRV20254958', 'Nicole Mahilum', '09602618772', 'nicole@gmail.com', '12312313121', '$2y$10$nl.F/7Sn4btPLhxe.4SeZuGU4ZR8GEYyPce8o9nOyT/kM5INp2GQm', NULL, 'active', '2025-08-29 14:34:48', '2025-09-02 07:59:43', 1),
+(6, 'DRV20253934', 'Sample Driver', '09602618779', 'driver@gmail.com', '12312313123', '$2y$10$LJ4kwndAjG4VeWiJDuyoSeTn.QAwdBGWjLjbObpETclOQkhvP1aCq', 6, 'active', '2025-08-28 08:36:34', '2025-10-05 05:37:59', 1),
+(7, 'DRV20254958', 'Jane Smith', '09602618772', 'janesmith@gmail.com', '12312313121', '$2y$10$nl.F/7Sn4btPLhxe.4SeZuGU4ZR8GEYyPce8o9nOyT/kM5INp2GQm', NULL, 'active', '2025-08-29 14:34:48', '2025-10-05 05:38:42', 1),
 (8, 'DRV20250557', 'Mharian', '09602618778', 'mharian@gmail.com', '12312313124', '$2y$10$KIRIXcJ46sdbNGgzUv6ZDOezqY73Pij/Q8HqqXBDo02wjoGM4M66i', NULL, 'active', '2025-08-29 14:35:30', '2025-09-02 07:59:32', 1),
 (9, 'DRV20252503', 'batman', '09602618777', 'batman@gmail.com', '77777', '$2y$10$mg3tw4BULXgzo.mMbSIFvOI8yS8.CzFvvynhafYK4eq1QTm93.guu', NULL, 'active', '2025-08-30 04:42:42', '2025-09-02 08:00:20', 1);
 
@@ -653,7 +659,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`user_id`, `mobile_number`, `password`, `full_name`, `email`, `created_at`, `updated_at`, `status`) VALUES
 (3, '09602618771', '$2y$10$mG9Yo1lEEao9zKJeTPmX/.Efeu4L2Z5ZqeWjqqa9xS4z2Sc0DutKS', 'Mharian', 'mharian@gmail.com', '2025-08-27 13:37:19', '2025-08-27 13:37:19', 'active'),
-(4, '09602618779', '$2y$10$L.bExXOYgzoXRTrKeElxAuSDPINjsYEu6HTF7er7Xoi8vpMyW/Xtq', 'Miggy', 'miggy@gmail.com', '2025-09-02 17:04:56', '2025-09-02 17:04:56', 'active');
+(4, '09602618779', '$2y$10$L.bExXOYgzoXRTrKeElxAuSDPINjsYEu6HTF7er7Xoi8vpMyW/Xtq', 'Sample', 'sample@gmail.com', '2025-09-02 17:04:56', '2025-10-05 05:37:16', 'active');
 
 --
 -- Indexes for dumped tables
@@ -785,19 +791,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `active_trips`
 --
 ALTER TABLE `active_trips`
-  MODIFY `trip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `trip_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `admin_activity_log`
 --
 ALTER TABLE `admin_activity_log`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=266;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=268;
 
 --
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `booking_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `buses`
@@ -809,7 +815,7 @@ ALTER TABLE `buses`
 -- AUTO_INCREMENT for table `bus_locations`
 --
 ALTER TABLE `bus_locations`
-  MODIFY `location_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3846;
+  MODIFY `location_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3986;
 
 --
 -- AUTO_INCREMENT for table `bus_route_assignments`
